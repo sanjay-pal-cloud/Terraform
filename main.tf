@@ -65,7 +65,7 @@ resource "aws_route_table_association" "RT-2" {
 }
 # Create Security Group for instance
 resource "aws_security_group" "SG" {
-  Name = "DevSecOps-SG"
+  name = "DevSecOps-SG"
   description = "Security Group for DevSecOps Account"
   vpc_id = aws_vpc.MyVPC.id
 
@@ -74,7 +74,7 @@ resource "aws_security_group" "SG" {
     description      = "HTTP from VPC"
     from_port        = 80
     to_port          = 80
-    protocol         = "HTTP"
+    protocol         = "tcp"
     cidr_blocks      = [aws_vpc.main.cidr_block]
   }
 
@@ -82,7 +82,7 @@ resource "aws_security_group" "SG" {
     description      = "SSH from VPC"
     from_port        = 22
     to_port          = 22
-    protocol         = "SSH"
+    protocol         = "tcp"
     cidr_blocks      = [aws_vpc.main.cidr_block]
   }
 
