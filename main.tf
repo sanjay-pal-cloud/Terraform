@@ -55,13 +55,13 @@ resource "aws_route_table" "RT" {
 
 # Configure Route Table Association
 resource "aws_route_table_association" "RT-1" {
-  subnet_id = aws_subnet.Sub1.id
-  route_table_id = aws_route_table.RT.id
+  subnet_id       = aws_subnet.Sub1.id
+  route_table_id  = aws_route_table.RT.id
 }
 
 resource "aws_route_table_association" "RT-2" {
-  subnet_id = aws_subnet.Sub2.id
-  route_table_id = aws_route_table.RT.id
+  subnet_id       = aws_subnet.Sub2.id
+  route_table_id  = aws_route_table.RT.id
 }
 # Create Security Group for instance
 resource "aws_security_group" "SG" {
