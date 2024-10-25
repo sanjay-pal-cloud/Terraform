@@ -10,7 +10,7 @@ resource "aws_vpc" "myVPC" {
     Customer-Name = "${var.customer_name}"
   }
 }
-
+#AvailabityZone
 # Get all Availability Zones in region
 data "aws_availability_zones" "availability_zone" {}
 

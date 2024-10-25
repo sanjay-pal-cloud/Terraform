@@ -1,4 +1,4 @@
-# Create a VPC
+# Create a VPC AWSS
 resource "aws_vpc" "MyVPC" {
   cidr_block = var.cidr_block
   tags = {
